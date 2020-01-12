@@ -6,15 +6,15 @@ The app is primarily designed to be used in conjunction with Wireshark, which is
 Although Wireshark is the tool that is recommended, other similar tools can also be used as captured packets are saved in the commonly used pcapng format.
 
 Features:
-#1: Remote capturing using the built-in SSH server;
-#2: Supporting Wireshark sshdump tool (https://www.wireshark.org/docs/man-pages/sshdump.html);
-#3: Capturing traffic as .pcap file;
-#4: MITM (Man-in-the-middle) functionality, which allows you to decrypt traffic in Wireshark;
-#5: No root required.
+1: Remote capturing using the built-in SSH server;
+2: Supporting Wireshark sshdump tool (https://www.wireshark.org/docs/man-pages/sshdump.html);
+3: Capturing traffic as .pcap file;
+4: MITM (Man-in-the-middle) functionality, which allows you to decrypt traffic in Wireshark;
+5: No root required.
 
 Limitations:
-#1: TLS 1.3 is not supported when using the MITM functionality;
-#2: The SSH server only supports IP v4 clients;
-#3: Hotspot/Tethering traffic can't be captured.
+1: TLS 1.3 is not supported when using the MITM functionality;
+2: The SSH server only supports IP v4 clients;
+3: Hotspot/Tethering traffic can't be captured.
 
 Info/How-to: https://egorovandreyrm.com/pcap-remote-tutorial/
