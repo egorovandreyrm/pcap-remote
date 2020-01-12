@@ -1,3 +1,5 @@
+### NOTE: CURRENTLY, THE JNI PART THAT DOES ALL THE RE-ROUTING AND MITM FUNCTIONALITY IS NOT OPEN-SOURCE. IT WOULD BE IN A COUPLE OF MONTHS.
+
 PCAP Remote is a non-root network sniffer app that allows you to debug and analyze
 Android traffic on your desktop PC using the app's built-in SSH server, which is useful and often a must when developing mobile applications that use complex/custom network protocols. The traffic is captured using an Android OS feature called VpnService.
 
