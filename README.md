@@ -1,3 +1,6 @@
+PCAP Remote
+-----------
+
 ### NOTE: CURRENTLY, THE JNI PART THAT DOES ALL THE RE-ROUTING AND MITM FUNCTIONALITY IS NOT OPEN-SOURCE. IT WOULD BE IN A COUPLE OF MONTHS.
 
 PCAP Remote is a non-root network sniffer app that allows you to debug and analyze
@@ -24,3 +27,20 @@ Limitations:
 - Hotspot/Tethering traffic can't be captured.
 
 Info/How-to: https://egorovandreyrm.com/pcap-remote-tutorial/
+
+License
+-------
+
+[GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt)
+
+Copyright (c) 2019 Egorov Andrey
+
+All rights reserved
+
+This file is part of PCAP Remote.
+
+PCAP Remote is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your discretion) any later version.
+
+PCAP Remote is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with PCAP Remote. If not, see http://www.gnu.org/licenses/.
