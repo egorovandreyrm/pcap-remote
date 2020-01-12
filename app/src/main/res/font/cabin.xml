@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/cabin_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/cabin_regular"
+        tools:targetApi="o" />
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/cabin_semibold"
+        app:fontStyle="italic"
+        app:fontWeight="400"
+        app:font="@font/cabin_semibold"
+        tools:targetApi="o"/>
+</font-family>

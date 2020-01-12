@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">PCAP Remote</string>
+    <string name="app_channel">pcapremote_channel</string>
+
+    <string name="info_dialog_title">Info</string>
+    <string name="warn_dialog_title">Warning</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="tutorial_dialog_open_help_howto">HELP/HOW-TO</string>
+    <string name="webview_inflation_error">Unknown WebView error.\n%1$s</string>
+
+    <string name="capturing_status_awaiting_for_ssh_client">Awaiting for SSH client…</string>
+    <string name="capturing_status_capturing">Captured Packets: %1$d</string>
+    <string name="capturing_status_remote_capturing">Captured Packets: %1$d | Sent to SSH: %2$d</string>
+
+    <!--main activity-->
+    <string name="main_activity_dashboard_tab_title">DASHBOARD</string>
+    <string name="main_activity_ssl_errors_tab_title">SSL ERRORS</string>
+    <string name="main_activity_copied_to_clipboard">Copied to clipboard</string>
+    <string name="main_activity_mitm_certificate_warning_title">MITM Certificate</string>
+    <string name="main_activity_mitm_certificate_warning">The feature is based on the MITM (Man-in-the-middle) proxy technique. To make applications accept the MITM certificate, it has to be installed to trusted credentials.\n\nOn Android N+ additional steps need to be probably taken.\n\nDetails can be read in the Help/How-to document.</string>
+    <string name="main_activity_mitm_certificate_warning_install_action">INSTALL</string>
+    <string name="main_activity_mitm_certificate_warning_ignore_action">IGNORE</string>
+    <string name="main_activity_save_pcap_file_dialog_title">Captured packets</string>
+    <string name="main_activity_save_pcap_file_dialog_message">Do you want to save the captured packets as a .pcap file? The packets will be lost if you do not save them.</string>
+    <string name="main_activity_save_pcap_file_dialog_save_button">SAVE</string>
+    <string name="main_activity_save_pcap_file_dialog_discard_button">DISCARD</string>
+    <string name="main_activity_first_remote_capturing_info">Capturing has been started. You should be able to connect to the SSH server from your desktop PC.\n\nIf you are not sure how to do that, details can be read in the Help/How-to document.</string>
+    <string name="main_activity_remote_capturing_started_toast">Capturing has been started. You should be able to connect to the SSH server from your PC</string>
+    <string name="main_activity_capturing_started_toast">Capturing has been started. Packets will be saved as a .pcap file</string>
+    <string name="main_activity_save_pcap_file_error">Failed to save pcap file: %1$s</string>
+    <string name="main_activity_pcap_file_saved_toast">Pcap file has been saved</string>
+    <string name="main_activity_network_interfaces_dialog_title">Network interfaces</string>
+    <string name="main_activity_network_interfaces_dialog_copy">Copy</string>
+    <string name="main_activity_rate_app_dialog_message">Would you mind taking a moment to support the app by rating it on Play? It won\'t take long.</string>
+    <string name="main_activity_support_the_project_dialog_title">Support the project</string>
+    <string name="main_activity_support_the_project_dialog_purchase">PURCHASE</string>
+    <string name="main_activity_support_the_project_dialog_maybe_later">MAYBE LATER</string>
+    <!--main activity-->
+
+
+    <!--dashboard fragment-->
+    <string name="dashboard_capturing_mode_ssh_server_title">Capturing Mode: SSH server</string>
+    <string name="dashboard_capturing_mode_ssh_server_description">Captured traffic will be sent to SSH and can be viewed in Wireshark or other tools</string>
+    <string name="dashboard_capturing_mode_pcap_file_title">Capturing Mode: .pcap file</string>
+    <string name="dashboard_capturing_mode_pcap_file_description">Captured traffic will be saved as .pcap file on device storage</string>
+
+    <string name="dashboard_remote_mode_enabled">Remote</string>
+    <string name="dashboard_ssl_intercepting_enabled">Make HTTPS/TLS connections decryptable</string>
+    <string name="dashboard_drop_connections_when_wireshark_connects">Drop connections on SSH client</string>
+    <string name="dashboard_network_interfaces">NETWORK INTERFACES</string>
+    <string name="dashboard_reading_network_interfaces">Reading network interfaces…</string>
+    <string name="dashboard_failed_to_read_network_interfaces">Failed to read network interfaces</string>
+    <string name="dashboard_ssh_server_group">SSH SERVER</string>
+    <string name="dashboard_ssh_server_ip">IP (wlan0): %1$s</string>
+    <string name="dashboard_ssh_server_ip_none">Unknown. Review Network interfaces (Menu->Network interfaces)</string>
+    <string name="dashboard_ssh_server_port">Port: %1$d</string>
+    <string name="dashboard_ssh_server_auth_disabled_info">Accepts any user/password/certificate</string>
+    <string name="dashboard_ssl_mitm_warning">As PCAP Remote can\'t make QUIC connections decryptable, it blocks the protocol and forces apps to use TCP.</string>
+    <!--dashboard fragment-->
+
+    <!--webview activity-->
+    <string name="webview_activity_info_title">Help/How-to</string>
+    <string name="webview_activity_privacy_policy_title">Privacy policy</string>
+    <string name="webview_activity_share_using">Share the document URL</string>
+    <string name="webview_activity_info_shared_info_template">PCAP Remote Help/How-to: %1$s</string>
+    <!--webview activity-->
+
+    <!--select app activity-->
+    <string name="select_app_activity_title">Choose app to capture</string>
+    <string name="select_app_activity_search_apps">Search Apps</string>
+    <!--select app activity-->
+
+    <!--initial launch activity-->
+    <string name="initial_launch_activity_info">Network sniffer app that allows you to debug and analyze Android traffic on your desktop PC using the app\'s built-in SSH server.\n\nNo Root required. Traffic is captured using an Android OS feature called VpnService.</string>
+    <string name="initial_launch_activity_support_the_project">PCAP Remote is completely free to use and does not show any ads. If you like the app and want it to evolve, please consider supporting the project by purchasing the dark theme (Settings->Dark Theme).</string>
+    <string name="initial_launch_activity_next">Next</string>
+    <string name="initial_launch_activity_skip">Skip</string>
+    <string name="initial_launch_activity_open_tutorial">Open tutorial</string>
+    <!--initial launch activity-->
+
+    <!--pcap remote vpn service-->
+    <string name="pcap_vpn_service_establish_failed">Failed to initialize VPN service</string>
+    <string name="pcap_vpn_service_jni_unexpectedly_stopped">Capturing has unexpectedly stopped: %1$s</string>
+    <string name="pcap_vpn_service_ssl_error">App: %1$s host: %2$s: MITM certificate was rejected: %3$s</string>
+    <string name="pcap_vpn_service_foreground_notification_title">Capturing…</string>
+    <!--pcap remote vpn service-->
+
+    <!--actions-->
+    <string name="action_info">Help/How-to</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_reload_network_interfaces">Network interfaces</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_rate_app">Rate App</string>
+    <string name="action_support_app">Support App</string>
+
+    <!--actions-->
+
+    <!--preferences-->
+    <string name="preferences_title">Settings</string>
+    <string name="preferences_capturing">Capturing</string>
+    <string name="preferences_import_mitm_certificate">Import MITM certificate</string>
+    <string name="preferences_ssl_certificate">SSL Certificate</string>
+    <string name="preferences_certificate_status">Status</string>
+    <string name="preferences_certificate_status_not_installed">Not installed</string>
+    <string name="preferences_certificate_installed">Installed</string>
+    <string name="preferences_install_certificate">Install</string>
+    <string name="preferences_install_certificate_summary">Tap to install to trusted credentials</string>
+    <string name="preferences_export_certificate">Export</string>
+    <string name="preferences_export_certificate_summary">Tap to export the root certificate</string>
+    <string name="preferences_ssh_server">SSH Server</string>
+    <string name="preferences_ssh_server_port">Port</string>
+    <string name="preferences_export_ssh_server_certificate">Export certificate</string>
+    <string name="preferences_export_ssh_server_certificate_summary">Tap to export private certificate. The certificate is needed to connect to the SSH server without entering password when using Wireshark</string>
+    <string name="preferences_about_title">About</string>
+    <string name="preferences_about_open_source_licenses">Open source licenses</string>
+    <string name="preferences_about_private_policy">Privacy policy</string>
+    <string name="preferences_about_build_info">Version</string>
+    <string name="preferences_about_build_info_default">unknown</string>
+    <string name="preferences_about_version_template">%1$s (%2$s)</string>
+    <string name="preferences_port_null_error">Port can not be empty</string>
+    <string name="preferences_privileged_port_error">Ports less than 1024 are not allowed since it is not possible to bind to them without root access.</string>
+    <string name="preferences_invalid_format">Invalid format</string>
+    <string name="preferences_debug_mode_enabled">Debug mode enabled</string>
+    <string name="preferences_debug_start_logcat_capturing">Start logcat capturing</string>
+    <string name="preferences_debug_stop_logcat_capturing">Stop logcat capturing</string>
+    <string name="preferences_debug_logcat_capturing_started">Logcat capturing has been started</string>
+    <string name="preferences_debug_start_logcat_capturing_error">Failed to start logcat capturing</string>
+    <string name="preferences_file_exported">Saved</string>
+
+    <string name="preferences_misc">Misc</string>
+    <string name="preferences_dark_theme">Dark Theme</string>
+    <!--preferences-->
+
+    <!--preferences keys-->
+    <string name="preferences_keys_install_certificate">install_certificate</string>
+    <string name="preferences_keys_export_certificate">export_certificate</string>
+    <string name="preferences_keys_ssh_server_port">ssh_server_port</string>
+    <string name="preferences_keys_export_ssh_server_certificate">export_ssh_server_certificate</string>
+    <string name="preferences_keys_about_open_source_licenses">open_source_licenses</string>
+    <string name="preferences_keys_about_privacy_policy">privacy_policy</string>
+    <string name="preferences_keys_about_build_info">build_info</string>
+    <string name="preferences_keys_debug_start_stop_logcat_capturing">start_stop_logcat_capturing</string>
+    <string name="preferences_keys_dark_theme">dark_theme</string>
+    <!--preferences keys-->
+
+    <!--preferences default values-->
+    <string name="preferences_default_ssh_server_port">15432</string>
+    <!--preferences default values-->
+</resources>

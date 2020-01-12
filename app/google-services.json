@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "9088038707",
+    "firebase_url": "https://pcap-remote.firebaseio.com",
+    "project_id": "pcap-remote",
+    "storage_bucket": "pcap-remote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9088038707:android:40b6a6c72edf47b6d63046",
+        "android_client_info": {
+          "package_name": "com.egorovandreyrm.pcapremote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9088038707-30q85ovbi1ppi09vj6te4di5cng6r0lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPhaVktVNzrR4zLTd0D1X1MpMmrBdf5xE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9088038707-30q85ovbi1ppi09vj6te4di5cng6r0lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9088038707:android:3706d0d67f6961f7d63046",
+        "android_client_info": {
+          "package_name": "com.egorovandreyrm.pcapremote.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9088038707-30q85ovbi1ppi09vj6te4di5cng6r0lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPhaVktVNzrR4zLTd0D1X1MpMmrBdf5xE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9088038707-30q85ovbi1ppi09vj6te4di5cng6r0lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

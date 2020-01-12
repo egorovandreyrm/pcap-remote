@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/preferences_ssl_certificate">
+        <Preference
+            android:key="@string/preferences_keys_install_certificate"
+            android:persistent="false"
+            android:selectable="true"
+            android:summary="@string/preferences_install_certificate_summary"
+            android:title="@string/preferences_install_certificate" />
+
+        <Preference
+            android:key="@string/preferences_keys_export_certificate"
+            android:persistent="false"
+            android:selectable="true"
+            android:summary="@string/preferences_export_certificate_summary"
+            android:title="@string/preferences_export_certificate" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_ssh_server">
+        <EditTextPreference
+            android:defaultValue="@string/preferences_default_ssh_server_port"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="@string/preferences_keys_ssh_server_port"
+            android:title="@string/preferences_ssh_server_port" />
+
+        <Preference
+            android:key="@string/preferences_keys_export_ssh_server_certificate"
+            android:persistent="false"
+            android:selectable="true"
+            android:summary="@string/preferences_export_ssh_server_certificate_summary"
+            android:title="@string/preferences_export_ssh_server_certificate" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_misc">
+        <SwitchPreference
+            android:key="@string/preferences_keys_dark_theme"
+            android:title="@string/preferences_dark_theme"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_about_title">
+        <Preference
+            android:key="@string/preferences_keys_about_open_source_licenses"
+            android:persistent="false"
+            android:selectable="true"
+            android:title="@string/preferences_about_open_source_licenses" />
+
+        <Preference
+            android:key="@string/preferences_keys_about_privacy_policy"
+            android:persistent="false"
+            android:selectable="true"
+            android:title="@string/preferences_about_private_policy" />
+
+        <Preference
+            android:key="@string/preferences_keys_about_build_info"
+            android:persistent="false"
+            android:selectable="true"
+            android:summary="@string/preferences_about_build_info_default"
+            android:title="@string/preferences_about_build_info" />
+
+        <Preference
+            android:key="@string/preferences_keys_debug_start_stop_logcat_capturing"
+            android:persistent="false"
+            android:selectable="true"
+            android:title="@string/preferences_debug_start_logcat_capturing"
+            app:isPreferenceVisible="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

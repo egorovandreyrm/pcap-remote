@@ -1,0 +1,89 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.pcapremote.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_spinner_capturing_mode" >
+            <Spinner
+                android:id="@+id/spnCapturingModes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switchSslMitm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/cabin_regular"
+            android:text="@string/dashboard_ssl_intercepting_enabled"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/switchDropConnectionsOnSshClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/cabin_regular"
+            android:text="@string/dashboard_drop_connections_when_wireshark_connects"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSshServer"
+            style="@style/dashboard_text_view_misc_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cabin_bold"
+            android:text="@string/dashboard_ssh_server_group" />
+
+        <View
+            android:id="@+id/vSshServerDelimiter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/llSshServerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSshServerIpv4"
+                style="@style/dashboard_text_view_misc_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@string/dashboard_ssh_server_ip_none"
+                tools:text="Ip: 192.168.0.102" />
+
+            <TextView
+                android:id="@+id/tvSshServerPort"
+                style="@style/dashboard_text_view_misc_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                tools:text="Port: 22" />
+
+            <TextView
+                android:id="@+id/tvSshServerAuthDisabledInfo"
+                style="@style/dashboard_text_view_misc_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@string/dashboard_ssh_server_auth_disabled_info" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

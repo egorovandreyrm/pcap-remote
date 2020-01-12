@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#1976D2</color>
+    <color name="tabIndicatorColor">@android:color/white</color>
+
+    <color name="dashboard_add_info_text_color">@android:color/tab_indicator_text</color>
+    <color name="dashboard_spinner_capturing_mode_title_color">@android:color/black</color>
+
+    <color name="log_info_entry_color">@color/dashboard_add_info_text_color</color>
+    <color name="log_warn_entry_color">#FF69B4</color>
+    <color name="log_error_entry_color">#ED4337</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

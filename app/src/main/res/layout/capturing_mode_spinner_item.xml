@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvCapturingModeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin_regular"
+        android:textColor="@color/dashboard_spinner_capturing_mode_title_color"
+        android:textSize="16sp"
+        tools:text="SSH Server" />
+
+    <TextView
+        android:id="@+id/tvCapturingModeDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin_regular"
+        tools:text="Captured traffic is sent to your PC" />
+</LinearLayout>
