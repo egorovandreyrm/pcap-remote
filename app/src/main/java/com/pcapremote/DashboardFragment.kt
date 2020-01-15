@@ -122,7 +122,7 @@ class DashboardFragment : Fragment(), SharedPreferences.OnSharedPreferenceChange
 
         spnCapturingModes.isEnabled = !SnifferVpnService.isRunning
         switchSslMitm.isEnabled = !SnifferVpnService.isRunning
-        switchDropConnectionsOnSshClient.isEnabled = !SnifferVpnService.isRunning && Preferences.remoteMode
+        switchDropConnectionsOnSshClient.isEnabled = !SnifferVpnService.isRunning
 
         updateSshServerIpView()
         initSshServerPortView()
@@ -249,8 +249,9 @@ class DashboardFragment : Fragment(), SharedPreferences.OnSharedPreferenceChange
         }
     }
 
+    @Suppress("unused")
     @Subscribe
-    fun onSnifferRunningStateChanged(event: SnifferRunningStateChanged) {
+    fun onSnifferRunningStateChanged(@Suppress("UNUSED_PARAMETER") event: SnifferRunningStateChanged) {
         spnCapturingModes.isEnabled = !SnifferVpnService.isRunning
         switchSslMitm.isEnabled = !SnifferVpnService.isRunning
         switchDropConnectionsOnSshClient.isEnabled = !SnifferVpnService.isRunning
