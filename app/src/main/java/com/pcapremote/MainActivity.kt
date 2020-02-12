@@ -135,6 +135,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(dashboardFragment, getString(R.string.main_activity_dashboard_tab_title))
         adapter.addFragment(SslErrorsFragment(), getString(R.string.main_activity_ssl_errors_tab_title))
+        //adapter.addFragment(HowToFaqFragment(), getString(R.string.main_activity_how_to_faq_tab_title))
         vpTabs.adapter = adapter
     }
 
@@ -415,8 +416,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Suppress("unused")
     @Subscribe
-    fun onSnifferRunningStateChanged(event: SnifferRunningStateChanged) {
+    fun onSnifferRunningStateChanged(@Suppress("UNUSED_PARAMETER") event: SnifferRunningStateChanged) {
         invalidateOptionsMenu()
 
         llStatus.visibility = if (SnifferVpnService.isRunning) {
@@ -427,6 +429,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Suppress("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onSnifferStatsEvent(event: SnifferStatsEvent) {
         if (!SnifferVpnService.isRunning) {

@@ -72,7 +72,7 @@ abstract class SslErrorsDatabase : RoomDatabase() {
 class SslErrorsFragment : Fragment() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    private val accessLogAdapter = object : RecyclerView.Adapter<ViewHolder>() {
+    private val adapter = object : RecyclerView.Adapter<ViewHolder>() {
         var entries = mutableListOf<SslErrorEntry>()
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -88,7 +88,7 @@ class SslErrorsFragment : Fragment() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = entries[position]
-            holder.itemView.tvText.text = item.text
+            holder.itemView.tvTitle.text = item.text
 
             val color = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 resources.getColor(R.color.log_error_entry_color, null)
@@ -96,19 +96,17 @@ class SslErrorsFragment : Fragment() {
                 resources.getColor(R.color.log_error_entry_color)
             }
 
-            holder.itemView.tvText.setTextColor(color)
+            holder.itemView.tvTitle.setTextColor(color)
 
             holder.itemView.setOnLongClickListener {
-                this@SslErrorsFragment.activity?.let {
-                    (it.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)?.let { clipboard ->
-                        clipboard.setPrimaryClip(ClipData.newPlainText("", item.text))
-
-                        Toast.makeText(
-                                it,
-                                R.string.main_activity_copied_to_clipboard,
-                                Toast.LENGTH_SHORT).show()
-                    }
+                (requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)?.let { clipboard ->
+                    clipboard.setPrimaryClip(ClipData.newPlainText("", item.text))
+                    Toast.makeText(
+                            requireContext(),
+                            R.string.main_activity_copied_to_clipboard,
+                            Toast.LENGTH_SHORT).show()
                 }
+
                 true
             }
         }
@@ -123,14 +121,14 @@ class SslErrorsFragment : Fragment() {
 
         rvLog.layoutManager = LinearLayoutManager(activity)
         rvLog.setHasFixedSize(true)
-        rvLog.adapter = accessLogAdapter
+        rvLog.adapter = adapter
 
         lifecycleScope.launch {
-            accessLogAdapter.entries = withContext(Dispatchers.IO) {
+            adapter.entries = withContext(Dispatchers.IO) {
                 Application.instance.sslErrorsDao.all().toMutableList()
             }
 
-            accessLogAdapter.notifyDataSetChanged()
+            adapter.notifyDataSetChanged()
 
             // to avoid synchronization problems with accessLogAdapter.entries
             // as if we initialize the listener outside of the coroutine the variable could be modified
@@ -138,17 +136,17 @@ class SslErrorsFragment : Fragment() {
             listener = object : OnEntryAddedListener {
                 override fun onNewEntry(entry: SslErrorEntry) {
                     // >= since we need space to add a new entry
-                    while (accessLogAdapter.entries.size >= LIMIT) {
-                        accessLogAdapter.entries.removeAt(accessLogAdapter.entries.size - 1)
+                    while (adapter.entries.size >= LIMIT) {
+                        adapter.entries.removeAt(adapter.entries.size - 1)
                     }
 
-                    accessLogAdapter.entries.add(0, entry)
-                    accessLogAdapter.notifyDataSetChanged()
+                    adapter.entries.add(0, entry)
+                    adapter.notifyDataSetChanged()
                 }
 
                 override fun clearLog() {
-                    accessLogAdapter.entries.clear()
-                    accessLogAdapter.notifyDataSetChanged()
+                    adapter.entries.clear()
+                    adapter.notifyDataSetChanged()
                 }
             }
         }

@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/colorPrimary">
+        android:background="@color/status_bar_background_color">
 
         <TextView
             android:id="@+id/tvStatus"

@@ -15,6 +15,7 @@
     <!--main activity-->
     <string name="main_activity_dashboard_tab_title">DASHBOARD</string>
     <string name="main_activity_ssl_errors_tab_title">SSL ERRORS</string>
+    <string name="main_activity_how_to_faq_tab_title">HOW-TO/FAQ</string>
     <string name="main_activity_copied_to_clipboard">Copied to clipboard</string>
     <string name="main_activity_mitm_certificate_warning_title">MITM Certificate</string>
     <string name="main_activity_mitm_certificate_warning">The feature is based on the MITM (Man-in-the-middle) proxy technique. To make applications accept the MITM certificate, it has to be installed to trusted credentials.\n\nOn Android N+ additional steps need to be probably taken.\n\nDetails can be read in the Help/How-to document.</string>
@@ -36,7 +37,6 @@
     <string name="main_activity_support_the_project_dialog_purchase">PURCHASE</string>
     <string name="main_activity_support_the_project_dialog_maybe_later">MAYBE LATER</string>
     <!--main activity-->
-
 
     <!--dashboard fragment-->
     <string name="dashboard_capturing_mode_ssh_server_title">Capturing Mode: SSH server</string>
@@ -145,5 +145,4 @@
 
     <!--preferences default values-->
     <string name="preferences_default_ssh_server_port">15432</string>
-    <!--preferences default values-->
 </resources>

@@ -5,6 +5,8 @@
     <color name="colorAccent">#1976D2</color>
     <color name="tabIndicatorColor">@android:color/white</color>
 
+    <color name="status_bar_background_color">@color/colorPrimary</color>
+
     <color name="dashboard_add_info_text_color">@android:color/tab_indicator_text</color>
     <color name="dashboard_spinner_capturing_mode_title_color">@android:color/black</color>
 
