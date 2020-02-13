@@ -292,7 +292,7 @@ class SnifferVpnService : VpnService() {
 
         builder.setMtu(MTU)
 
-        if (MiscUtils.isSamsung() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             for (dnsAddr in getAndroid10DnsList()) {
                 builder.addDnsServer(dnsAddr)
             }
