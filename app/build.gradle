@@ -11,8 +11,8 @@ android {
         applicationId "com.egorovandreyrm.pcapremote"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1000000017
-        versionName "1.0.0.17"
+        versionCode 1000000018
+        versionName "1.0.0.18"
 
 //        externalNativeBuild {
 //            cmake {

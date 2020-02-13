@@ -8,7 +8,6 @@
 /captures
 *.o
 *.o.d
-*.so
 **/obj/**
 *.iml
 *.apk
